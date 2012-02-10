@@ -1,0 +1,3 @@
+
+overlay	chrome://browser/content/browser.xul	chrome://fmutil/content/fmutil.xul
+content	fmutil	chrome/content//

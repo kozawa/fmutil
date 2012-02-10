@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<RDF:RDF xmlns:RDF="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:chrome="http://www.mozilla.org/rdf/chrome#">
+
+  <!-- list all the packages being supplied by this jar -->
+  <RDF:Seq about="urn:mozilla:package:root">
+    <RDF:li resource="urn:mozilla:package:fmutil"/>
+  </RDF:Seq>
+
+  <!-- package information -->
+  <RDF:Description about="urn:mozilla:package:fmutil"
+        chrome:displayName="fmutil"
+        chrome:author="kozawa@mozilla.gr.jp"
+	chrome:extension="true"
+	chrome:settingsURL="chrome://fmutil/content/fmutil.xul"
+        chrome:name="fmutil"
+	chrome:description="Web Mail Toolbar Ad-on:)">
+  </RDF:Description>
+
+  <!-- overlay information -->
+  <RDF:Seq about="urn:mozilla:overlays">
+    <!-- Firefox -->
+    <RDF:li resource="chrome://browser/content/browser.xul"/>
+    <!-- Navigator -->
+    <RDF:li resource="chrome://navigator/content/navigatorOverlay.xul"/>
+  </RDF:Seq>
+
+  <!-- Firefox -->
+  <RDF:Seq about="chrome://browser/content/browser.xul">
+    <RDF:li>chrome://fmutil/content/fmutil.xul</RDF:li>
+  </RDF:Seq>
+  <!-- Navigator -->
+  <RDF:Seq about="chrome://navigator/content/navigatorOverlay.xul">
+    <RDF:li>chrome://fmutil/content/fmutil.xul</RDF:li>
+  </RDF:Seq>
+</RDF:RDF>

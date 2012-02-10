@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<?xml-stylesheet href="chrome://browser/skin/" type="text/css"?>
+
+<overlay id="freeMailUtilityOverlay"
+    xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+<script type="application/x-javascript" src="chrome://fmutil/content/fmutil.js" />
+
+<!-- for Suite Toggle -->
+<menupopup id="view_toolbars_popup">
+    <menuitem id="viewfmutil" label="fmutil Toolbar" class="menuitem-iconic"
+        type="checkbox" checked="true" position="3"
+        oncommand="goToggleToolbar('fmu_toolbar', 'viewfmutil')" />
+</menupopup>
+
+
+<toolbox id="navigator-toolbox">
+    <toolbar id="fmu_toolbar" align="vertical" toolbarname="Fmutil Toolbar">
+        <menulist id="entry-select">
+            <menupopup>
+                <menuitem label="-----" />
+                <menuitem label="1:" />
+                <menuitem label="2:" />
+                <menuitem label="3:" />
+                <menuitem label="4:" />
+                <menuitem label="5:" />
+                <menuitem label="6:" />
+                <menuitem label="7:" />
+                <menuitem label="8:" />
+                <menuitem label="9:" />
+                <menuitem label="10:" />
+                <menuitem label="11:" />
+                <menuitem label="12:" />
+                <menuitem label="13:" />
+                <menuitem label="14:" />
+                <menuitem label="15:" />
+                <menuitem label="16:" />
+                <menuitem label="17:" />
+                <menuitem label="18:" />
+                <menuitem label="19:" />
+                <menuitem label="20:" />
+                <menuitem label="21:" />
+                <menuitem label="22:" />
+                <menuitem label="23:" />
+                <menuitem label="24:" />
+                <menuitem label="25:" />
+                <menuitem label="26:" />
+                <menuitem label="27:" />
+                <menuitem label="28:" />
+                <menuitem label="29:" />
+                <menuitem label="30:" />
+            </menupopup>
+        </menulist>
+        <button id="pref-button" label="設定" default="true" oncommand="fmu_pref()"/>
+<browser id="fmu" collapsed="true" />
+<html:form id="fmu-hiddenform-goo"
+    xmlns:html="http://www.w3.org/1999/xhtml" target="_content" method="post"
+    action="http://login.mail.goo.ne.jp/certify-cgi/login.cgi" autocomplete="off" a="fmu_form_goo" accept-charset="EUC-JP">
+    <html:input type="hidden" value="http://amigo.mail.goo.ne.jp/freemail/index.ghtml" name="success" />
+    <html:input type="hidden" name="uname" />
+    <html:input type="hidden" name="pass" />
+    <html:input type="hidden" value="ログイン" name="Submit" />
+    <html:input type="hidden" value="mail.goo.ne.jp" name="site" />
+    <html:input type="hidden" value="0" name="auto" />
+</html:form>
+<html:form id="fmu-hiddenform-yahoo"
+    xmlns:html="http://www.w3.org/1999/xhtml" target="_content" method="post"
+    action="http://login.yahoo.co.jp/config/login?x7tb2rt5a8rnv" autocomplete="off" a="fmu_form_yahoo">
+    <html:input type="hidden" name=".tries" value="" />
+    <html:input type="hidden" name=".src" value="ym" />
+    <html:input type="hidden" name=".last" value="" />
+    <html:input type="hidden" name="promo" value="" />
+    <html:input type="hidden" name=".intl" value="jp" />
+    <html:input type="hidden" name=".bypass" value="" />
+    <html:input type="hidden" name=".partner" value="" />
+    <html:input type="hidden" name=".u" value="0b1vp5svtu0va" />
+    <html:input type="hidden" name=".v" value="0" />
+    <html:input type="hidden" name=".fUpdate" value="Y" />
+    <html:input type="hidden" name="hasMsgr" value="0" />
+    <html:input type="hidden" name=".chkP" value="Y" />
+    <html:input type="hidden" name=".done" value="http://mail.yahoo.co.jp" />
+    <html:input type="hidden" name="login" value="" />
+    <html:input type="hidden" name="passwd" />
+</html:form>
+<html:form id="fmu-hiddenform-hotmail"
+    xmlns:html="http://www.w3.org/1999/xhtml" target="_content" method="post"
+    action="https://login.passport.com/ppsecure/post.srf?lc=1041&amp;id=2&amp;tw=20&amp;fs=1&amp;cbid=24325&amp;da=passport.com&amp;kpp=2&amp;svc=mail&amp;msppjph=1"
+    name="form1" autocomplete="off" a="fmu_form_hotmail">
+    <html:input type="hidden" name="login" id="loginid" class="PPRField" />
+    <html:input type="hidden" name="passwd" />
+    <html:input type="hidden" id="sec" name="sec" value="" />
+    <html:input type="hidden" name="mspp_shared" value="" />
+    <html:input type="hidden" name="padding" />
+    <html:input type="hidden" Name="domain" Value="hotmail.com" />
+</html:form>
+<html:form id="fmu-hiddenform-sonet"
+    xmlns:html="http://www.w3.org/1999/xhtml" target="_content" method="post"
+    action="https://wmail01.so-net.ne.jp/cgi/wm.cgi"
+    autocomplete="off" a="fmu_form_sonet">
+<html:input type="hidden" name="M" value="1" />
+<html:input type="hidden" name="T" value="0" />
+<html:input type="hidden" name="PRF" value="mn" />
+<html:input type="hidden" name="MAIL" value="" />
+<html:input type="hidden" name="REALPASS" value="" />
+<html:input type="hidden" name="REC_CHECK" value="checkbox" />
+</html:form>
+<!-- new form but now disable
+<html:form id="fmu-hiddenform-sonet"
+    xmlns:html="http://www.w3.org/1999/xhtml" target="_content" method="post"
+    action="https://wmail.so-net.ne.jp/webapp/wmail/login.do"
+    autocomplete="off" a="fmu_form_sonet">
+<html:input type="hidden" name="ref" value="so-net" />
+<html:input type="hidden" name="type" value="2" />
+<html:input type="hidden" name="account" value="" />
+<html:input type="hidden" name="password" value="" />
+<html:input type="hidden" name="REC_CHECK" value="checkbox" />
+</html:form>
+-->
+<html:form id="fmu-hiddenform-nifty"
+    xmlns:html="http://www.w3.org/1999/xhtml" target="_content" method="post"
+    action="enter.nifty.com/iw/nifty/mail/index.html"
+    autocomplete="off" a="fmu_form_nifty">
+</html:form>
+<html:form id="fmu-hiddenform-gmail"
+    xmlns:html="http://www.w3.org/1999/xhtml" target="_content" method="post"
+    action="https://www.google.com/accounts/ServiceLoginAuth"
+    autocomplete="off" a="fmu_form_gmail">
+<html:input type="hidden" name="Email" value="" />
+<html:input type="hidden" name="Passwd" value="" />
+<html:input type="hidden" name="PersistentCookie" value="yes" />
+<html:input type="hidden" name="continue" value="http://gmail.google.com/gmail?ui=html&amp;zy=l" />
+<html:input type="hidden" name="service" value="mail" />
+<html:input type="hidden" name="rm" value="false" />
+</html:form>
+<html:form id="fmu-hiddenform-echoo"
+    xmlns:html="http://www.w3.org/1999/xhtml" target="_content" method="post"
+    action="https://echoo.yubitoma.or.jp/index.htm"
+    autocomplete="off" a="fmu_form_echoo">
+<html:input type="hidden" name="loginid" value="" />
+<html:input type="hidden" name="pw" value="" />
+</html:form>
+<html:form id="fmu-hiddenform-ja.wikipedia"
+    xmlns:html="http://www.w3.org/1999/xhtml" target="_content" method="post"
+    action="http://ja.wikipedia.org/w/index.php?title=%E7%89%B9%E5%88%A5:Userlogin&amp;action=submitlogin&amp;returnto=%E7%89%B9%E5%88%A5:Recentchanges"
+    autocomplete="off" a="fmu_form_echoo">
+<html:input type="hidden" name="wpName" value="" />
+<html:input type="hidden" name="wpPassword" value="" />
+</html:form>
+<html:form id="fmu-hiddenform-hatena"
+    xmlns:html="http://www.w3.org/1999/xhtml" target="_content" method="post"
+    action="https://www.hatena.ne.jp/sslregister"
+    autocomplete="off" a="fmu_form_hatena">
+<html:input value="login" type="hidden" name="mode" />
+<html:input value="http://d.hatena.ne.jp/" type="hidden" name="backurl" />
+<html:input type="hidden" name="key" value="" />
+<html:input type="hidden" name="password" value="" />
+</html:form>
+<html:form id="fmu-hiddenform-sonet2"
+    xmlns:html="http://www.w3.org/1999/xhtml" target="_content" method="post"
+    action="https://www.so-net.ne.jp/webmail/pc/login/auth.do"
+    autocomplete="off" a="fmu_form_hatena">
+<html:input type="hidden" name="SSO_COMMON_ID" value="" />
+<html:input type="hidden" name="SSO_COMMON_PWD" value="" />
+</html:form>
+    </toolbar>
+</toolbox>
+</overlay>

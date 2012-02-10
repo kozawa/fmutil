@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<?xml-stylesheet href="chrome://browser/skin/" type="text/css"?>
+
+<window id="fmu_prefs"
+    xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    title="fmutil WebMailToolbar 設定" onload="fmu_pref_init();">
+
+<script type="application/x-javascript" src="chrome://fmutil/content/fmupref.js" />
+
+    <tabbox>
+        <tabs>
+            <tab label="アカウント情報" />
+            <tab label="設定" />
+            <tab label="バージョン情報" />
+        </tabs>
+        <tabpanels>
+            <tabpanel orient="vertical">
+                <label control="number-tabel" value="登録番号"/>
+                <menulist id="fmu-pref-number">
+                    <menupopup>
+                        <menuitem id="1" label="動作不良:" value="動作不良"/>
+                    </menupopup>
+                </menulist>
+		<groupbox orient="vertical">
+    	            <caption label="ログイン情報" />
+                    <label control="system-tabel" value="メールの種類"/>
+                    <menulist id="fmu-pref-type">
+                        <menupopup>
+                            <menuitem label="gooメール" value="goo" idx="0" oncomamnd="fmu_change_data();"/>
+                            <menuitem label="yahooメール" value="yah" idx="1" oncomamnd="fmu_change_data();"/>
+                            <menuitem label="hotmailメール" value="hot" idx="2" oncomamnd="fmu_change_data();"/>
+                            <menuitem label="so-netメール" value="son" idx="3" oncomamnd="fmu_change_data();"/>
+                            <menuitem label="niftyメール" value="nif" idx="4" oncomamnd="fmu_change_data();"/>
+                            <menuitem label="gmailメール" value="gma" idx="5" oncomamnd="fmu_change_data();"/>
+                            <menuitem label="echoo" value="ech" idx="6" oncomamnd="fmu_change_data();"/>
+                            <menuitem label="ja.wikipedia" value="jwp" idx="7" oncomamnd="fmu_change_data();"/>
+                            <menuitem label="はてなダイアリー" value="hat" idx="8" oncomamnd="fmu_change_data();"/>
+                            <menuitem label="so-netメール新版" value="so2" idx="9" oncomamnd="fmu_change_data();"/>
+                            <menuitem label="ほかのメールも対応したいのぉ" />
+                        </menupopup>
+                    </menulist>
+                    <label control="id-tabel" value="ID"/>
+                    <textbox id="id" maxlength="25" oncomamnd="fmu_change_data();"/>
+                    <label control="password-label" value="パスワード"/>
+                    <textbox id="pw" type="password" maxlength="25" oncomamnd="fmu_change_data();"/>
+		</groupbox>
+            </tabpanel>
+            <tabpanel orient="vertical">
+                <label control="which-open-tabel" value="メールを開くタブ（まだうまく動作しません）"/>
+                <radiogroup id="which-open-radiogr" orient="horizontal">
+                    <radio id="rtab" label="現在のタブ" value="rtab" />
+                    <radio id="ntab" label="新規タブ" value="ntab" />
+                    <radio id="nwin" label="新規ウィンドウ" value="nwin" />
+                </radiogroup>
+            </tabpanel>
+            <tabpanel orient="vertical">
+	        <html:p>
+		    fmutil 複数Webメール簡易ログインツールバー<html:br />
+		    version 0.0.15<html:br />
+		    Kozawa が作りました。<html:br />
+		    MPL(Mozilla Public License) 1.1<html:br />
+		    <html:a href="http://www.mozilla-japan.org/MPL/" onclick="window.opener.gBrowser.selectedTab = window.opener.gBrowser.addTab();" target="_content">http://www.mozilla-japan.org/MPL/</html:a><html:br />
+		    としますので、好きにしてやってください
+	        </html:p>
+            </tabpanel>
+        </tabpanels>
+    </tabbox>
+    <hbox>
+        <button label="OK" default="true" oncommand="fmu_pref_ok();" />
+        <button label="cancel" oncommand="window.close();" />
+    </hbox>
+</window>
