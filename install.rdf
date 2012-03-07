@@ -6,7 +6,7 @@
   <Description rdf:about="urn:mozilla:install-manifest">
     <em:id>{0b6d510e-8387-4a4e-a56a-7bcfb5018fb6}</em:id>
     <em:name>fmutil</em:name>
-    <em:version>0.0.15.01</em:version>
+    <em:version>0.3.2</em:version>
     <em:creator>Hidehiro Kozawa &lt;kozawa@mozilla.gr.jp&gt;</em:creator>
     <em:description>Web login asistant for webmail and so on.</em:description>
     <em:homepageURL>http://www013.upp.so-net.ne.jp/unha999/fmutil/fmutil.html/</em:homepageURL>
@@ -19,7 +19,7 @@
       <Description>
         <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
         <em:minVersion>0.10</em:minVersion>
-        <em:maxVersion>1.5.0.*</em:maxVersion>
+        <em:maxVersion>10.*.*</em:maxVersion>
       </Description>
     </em:targetApplication>
     <em:targetApplication>

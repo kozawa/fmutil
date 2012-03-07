@@ -13,7 +13,18 @@
         type="checkbox" checked="true" position="3"
         oncommand="goToggleToolbar('fmu_toolbar', 'viewfmutil')" />
 </menupopup>
-
+  <!-- toolbar -->
+  <toolbarpalette id="FmutilToolbarPalette">
+    <toolbaritem>
+      <menulist label="FmutilList">
+        <menupopup id="view_toolbars_popup">
+          <menuitem id="viewfmutil" label="fmutil Toolbar" class="menuitem-iconic"
+            type="checkbox" checked="true" position="3"
+            oncommand="goToggleToolbar('fmu_toolbar', 'viewfmutil')" />
+        </menupopup>
+      </menulist>
+    </toolbaritem>
+  </toolbarpalette>
 
 <toolbox id="navigator-toolbox">
     <toolbar id="fmu_toolbar" align="vertical" toolbarname="Fmutil Toolbar">
@@ -66,7 +77,8 @@
 </html:form>
 <html:form id="fmu-hiddenform-yahoo"
     xmlns:html="http://www.w3.org/1999/xhtml" target="_content" method="post"
-    action="http://login.yahoo.co.jp/config/login?x7tb2rt5a8rnv" autocomplete="off" a="fmu_form_yahoo">
+    action="http://login.yahoo.co.jp/config/login?6eva2jcv4soku" autocomplete="off" a="fmu_form_yahoo">
+<!--    action="http://login.yahoo.co.jp/config/login?x7tb2rt5a8rnv" autocomplete="off" a="fmu_form_yahoo"> -->
     <html:input type="hidden" name=".tries" value="" />
     <html:input type="hidden" name=".src" value="ym" />
     <html:input type="hidden" name=".last" value="" />
@@ -74,7 +86,8 @@
     <html:input type="hidden" name=".intl" value="jp" />
     <html:input type="hidden" name=".bypass" value="" />
     <html:input type="hidden" name=".partner" value="" />
-    <html:input type="hidden" name=".u" value="0b1vp5svtu0va" />
+    <html:input type="hidden" name=".u" value="4jf5nhl1tqpqa" />
+<!--    <html:input type="hidden" name=".u" value="0b1vp5svtu0va" /> -->
     <html:input type="hidden" name=".v" value="0" />
     <html:input type="hidden" name=".fUpdate" value="Y" />
     <html:input type="hidden" name="hasMsgr" value="0" />
@@ -82,6 +95,10 @@
     <html:input type="hidden" name=".done" value="http://mail.yahoo.co.jp" />
     <html:input type="hidden" name="login" value="" />
     <html:input type="hidden" name="passwd" />
+</html:form>
+<html:form id="fmu-hiddenform-yahoo-before"
+    xmlns:html="http://www.w3.org/1999/xhtml" target="_content" method="get"
+    action="http://login.yahoo.co.jp/config/login?logout=1&amp;.intl=jp&amp;.src=ym&amp;.partner=&amp;.protoctl=&amp;.done=http%3A//mail.yahoo.co.jp/">
 </html:form>
 <html:form id="fmu-hiddenform-hotmail"
     xmlns:html="http://www.w3.org/1999/xhtml" target="_content" method="post"
@@ -129,9 +146,15 @@
 <html:input type="hidden" name="Email" value="" />
 <html:input type="hidden" name="Passwd" value="" />
 <html:input type="hidden" name="PersistentCookie" value="yes" />
-<html:input type="hidden" name="continue" value="http://gmail.google.com/gmail?ui=html&amp;zy=l" />
-<html:input type="hidden" name="service" value="mail" />
-<html:input type="hidden" name="rm" value="false" />
+<html:input type="hidden" name="continue" value="https://accounts.google.com/ServiceLogin" />
+<html:input type="hidden" name="dsh" value="-3402994851583307391" />
+<html:input type="hidden" name="GALX" value="MHqcfdeYVgI" />
+<html:input type="hidden" name="pstMsg" value="1" />
+<html:input type="hidden" name="dnConn" value="" />
+<html:input type="hidden" name="checkConnection" value="youtube:55:1" />
+<html:input type="hidden" name="checkedDomains" value="youtube" />
+<html:input type="hidden" name="timeStmp" value="" />
+<html:input type="hidden" name="secTok" value="" />
 </html:form>
 <html:form id="fmu-hiddenform-echoo"
     xmlns:html="http://www.w3.org/1999/xhtml" target="_content" method="post"
@@ -162,6 +185,11 @@
     autocomplete="off" a="fmu_form_hatena">
 <html:input type="hidden" name="SSO_COMMON_ID" value="" />
 <html:input type="hidden" name="SSO_COMMON_PWD" value="" />
+</html:form>
+<html:form id="fmu-hiddenform-nifty2"
+    xmlns:html="http://www.w3.org/1999/xhtml" target="_content" method="post"
+    action="https://enter.nifty.com/webmail/"
+    autocomplete="off" a="fmu_form_nifty">
 </html:form>
     </toolbar>
 </toolbox>
